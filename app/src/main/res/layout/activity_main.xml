@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/cr7">
+
+    <EditText
+        android:id="@+id/etMetros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa metros"
+        android:textColor="@color/white"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnKm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convertir a km" />
+
+    <Button
+        android:id="@+id/btnCm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convertir a cm" />
+
+    <Button
+        android:id="@+id/btnMm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convertir a mm" />
+
+</LinearLayout>
