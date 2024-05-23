@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         val metros = binding.Metros.text.toString().toDoubleOrNull() ?: return
         val dam = metros * 0.1
         Toast.makeText(this, "$metros metros son $dam decametros", Toast.LENGTH_SHORT).show()
+
     }
 
 }
