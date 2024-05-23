@@ -14,26 +14,34 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.btnKm.setOnClickListener { convertToKm() }
-        binding.btnCm.setOnClickListener { convertToCm() }
-        binding.btnMm.setOnClickListener { convertToMm() }
+        binding.BtnKm.setOnClickListener { KmConversion() }
+        binding.BtnCm.setOnClickListener { CmConversion() }
+        binding.BtnMm.setOnClickListener { MmConversion() }
+        binding.BtnDk.setOnClickListener { DamConversion() }
     }
 
-    private fun convertToKm() {
-        val metros = binding.etMetros.text.toString().toDoubleOrNull() ?: return
+    private fun KmConversion() {
+        val metros = binding.Metros.text.toString().toDoubleOrNull() ?: return
         val km = metros / 1000
-        Toast.makeText(this, "$metros metros son $km km", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "$metros metros son $km km", Toast.LENGTH_SHORT).show()
     }
 
-    private fun convertToCm() {
-        val metros = binding.etMetros.text.toString().toDoubleOrNull() ?: return
+    private fun CmConversion() {
+        val metros = binding.Metros.text.toString().toDoubleOrNull() ?: return
         val cm = metros * 100
-        Toast.makeText(this, "$metros metros son $cm cm", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "$metros metros son $cm cm", Toast.LENGTH_SHORT).show()
     }
 
-    private fun convertToMm() {
-        val metros = binding.etMetros.text.toString().toDoubleOrNull() ?: return
+    private fun MmConversion() {
+        val metros = binding.Metros.text.toString().toDoubleOrNull() ?: return
         val mm = metros * 1000
-        Toast.makeText(this, "$metros metros son $mm mm", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "$metros metros son $mm mm", Toast.LENGTH_SHORT).show()
     }
+
+    private fun DamConversion() {
+        val metros = binding.Metros.text.toString().toDoubleOrNull() ?: return
+        val dam = metros * 0.1
+        Toast.makeText(this, "$metros metros son $dam decametros", Toast.LENGTH_SHORT).show()
+    }
+
 }
